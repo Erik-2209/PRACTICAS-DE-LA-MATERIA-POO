@@ -1,0 +1,29 @@
+""""
+Programa: eva01.py
+Alumno: ERIK ALAIN HERNANDEZ APARICIO
+Matricula:1723110030
+Fecha:29/01/24
+"""
+
+class Profesor(): #se crea la clase
+   
+    def __init__(self, id, nombre): # se define el metodo init
+        
+        self.id = id profesores #se le dan atributos a id
+        self.nombre = nombre #se le dan atributos a nombre
+        self.materias = [] #array
+        print("ClaseProfesor") #imprime clase profesor
+
+    def califica(self): #se define  otro metodo 
+            print("El profesor {} califica evaluaciones de la materia {}".format(self.nombre, self.materias[0])) #imprime el profesor 1 califica evaluaciones de la materia 1
+
+    def pasaAsistencia(self): #se define otro metodo
+        print(f"El profesor {self.nombre} pasa asistencia") #imprime el profesor 1 pasa asistencia
+
+profesor1 = Profesor("111","Profesor 1") #se crea el objeto profesor 1
+profesor1.materias.append("Materia 1") #agrega una materia al array
+profesor1.materias.append("Materia 2") #agrega una materia al array
+profesor1.califica() #se invoca al metodo califica
+profesor1.pasaAsistencia() # se invoca al metodo pasa asistencia
+
+
