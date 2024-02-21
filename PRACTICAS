@@ -1,4 +1,106 @@
 """"
+NOMBRE: ERIK ALAIN HERNANDEZ APARICIO
+MATRICULA: 1723110030
+GRUPO: TI 21
+FECHA: 18/01/24
+DESCRIPCION: imprime la variable nombre
+"""
+
+class A: #define una clase de nombre A
+    matricula = None #declara la variable matricula 
+    nombre = None #declara la variable nombre
+
+objectA = A() #genera una instancia de la clase A
+
+print(objectA.nombre) #imprime el valor de la variable nombre....
+
+
+""""
+NOMBRE: ERIK ALAIN HERNANDEZ APARICIO
+MATRICULA: 1723110030
+GRUPO: TI 21
+FECHA: 18/01/24
+DESCRIPCION: imprime la variable nombre
+"""
+class A: #define una clase de nombre A
+    matricula = None #define una variable de nombre matricula
+    nombre = None #define una variable de nombre nombre
+def __init__(self): #define una funcion de nombre init
+      print("constructor de la clase A") #imprime en pantalla el texto constructor de la clase A
+
+objetoA = A() #define una variable de nombre objetoA y le asigna un objeto de la clase A
+
+print(objetoA.nombre) #imprime en pantalla el valor de la variable nombre del objeto A 
+
+
+""""
+NOMBRE: ERIK ALAIN HERNANDEZ APARICIO
+MATRICULA: 1723110030
+GRUPO: TI 21
+FECHA: 18/01/24
+DESCRIPCION: imprime el mensaje de objeto alumnos
+"""
+
+class Alumnos: #Creamos la clase Alumnos
+    matricula: None #Declaramos la variable matricula
+    nombre: None #Declaramos la variable nombre
+    def __init__(self, matricula, nombre): #Creamos el constructor
+      self.matricula = matricula #Asignamos el valor de la matricula
+      self.nombre = nombre #Asignamos el valor del nombre
+
+      print("objeto Alumnos") #Imprimimos el mensaje
+
+objetoAlumnos = Alumnos(12345, "Dejah") #Creamos el objeto objetoAlumnos
+
+
+""""
+NOMBRE: ERIK ALAIN HERNANDEZ APARICIO
+MATRICULA: 1723110030
+GRUPO: TI 21
+FECHA: 18/01/24
+DESCRIPCION: imprime el mensaje de objeto alumnos
+"""
+
+class Alumnos: #Definimos la clase Alumnos
+    matricula = None #atributo matricula
+    nombre = None #atributo nombre
+    def __init__(self, matricula, nombre): #definimos el metodo init
+        self.matricula = matricula #asignamos a la variable matricula el valor que se le pasa como parametro
+        self.nombre = nombre #asignamos a la variable nombre el valor que se le pasa como parametro
+        print("objeto Alumnos") #imprimimos el mensaje objeto Alumnos
+objetoAlumno = Alumnos(111, "Dejah") #creamos un objeto de la clase Alumnos
+objetoAlumno2 = Alumnos(matricula = 222, nombre = "jhon") #creamos un objeto de la clase Alumnos
+
+
+""""
+NOMBRE: ERIK ALAIN HERNANDEZ APARICIO
+MATRICULA: 1723110030
+GRUPO: TI 21
+FECHA: 18/01/24
+DESCRIPCION: se imprime objeto alumno cuando se crea un nuevo objeto de la clase Alumno. se imprime dejah estudia cuando se llama al metodo dejah.estudiar. se imprime la suma de 10 + 5 cuando se llama al metodo dejah.sumar.
+""" 
+
+class Alumno: #Definición de la clase Alumno
+    def __init__(self, matricula, nombre): #Constructor de la clase Alumno
+        self.matricula = matricula #Atributo matricula de la clase Alumno
+        self.nombre = nombre #Atributo nombre de la clase Alumno
+        print("objeto Alumno") #Mensaje de consola
+
+    def estudiar(self): #Método de la clase Alumno
+        print(f"{self.nombre} estudia") #Mensaje de consola
+
+    def sumar(self, numero1, numero2): #Método de la clase Alumno
+        suma = numero1 + numero2 #Variable suma
+        print(f"{numero1} + {numero2} = {suma}") #Mensaje de consola
+
+dejah = Alumno(111, "dejah") #Creación de objeto de la clase Alumno
+dejah.estudiar() #Llamada al método estudiar del objeto de la clase Alumno
+dejah.sumar(10,5) #Llamada al método sumar del objeto de la clase Alumno
+
+
+
+
+""""
 Programa: eva01.py
 Alumno: ERIK ALAIN HERNANDEZ APARICIO
 Matricula:1723110030
@@ -27,3 +129,123 @@ profesor1.califica() #se invoca al metodo califica
 profesor1.pasaAsistencia() # se invoca al metodo pasa asistencia
 
 
+
+"""
+Programa: eva02.py
+Nombre completo (nombre primer_apellido segundo_apellido): ERIK ALAIN HERNANDEZ APARICIO
+Matricula:1723110030
+Fecha:29/01/24
+"""
+
+class Libro(): #se crea la clase
+    def __init__(self, titulo, autor, anio_publicacion, genero, prestado=False): #se define el metodo init
+        self.titulo = titulo
+        self.autor = autor
+        self.anio_publicacion = anio_publicacion
+        self.genero = genero
+        self.prestado = prestado
+
+    def prestar(self):
+        self.prestado = True
+
+    def devolver(self):
+        self.prestado = False
+
+    def mostrar_informacion(self):
+        print(f"Título: {self.titulo}\n")
+        print(f"Autor: {self.autor}")
+        print(f"Año de publicación: {self.anio_publicacion}")
+        print(f"Género: {self.genero}")
+        print(f"Prestado: {'Sí' if self.prestado else 'No'}")
+
+libro1 = Libro("El Principito", "Antoine de Saint-Exupéry", 1943, "Ficción")
+libro2 = Libro("Cien años de soledad", "Gabriel García Márquez", 1967, "Ficción",True)
+libro1.prestar()
+libro1.mostrar_informacion()
+libro2.mostrar_informacion()
+libro1.devolver()
+libro1.mostrar_informacion()
+libro2.mostrar_informacion()
+
+
+cadena = "dejah@email.com"
+
+for i in range(0,len(cadena),2):
+    print(cadena[i])
+
+
+for i in range(1):
+    print(cadena[::2])
+
+
+a=10
+b=9
+c=18
+
+if a > b: #evalua la primera condicion si es verdadero se ejecuta el otro if
+    if a > c:
+        print(a)
+    else: #si ninguna de las anteriores se cumple se ejecuta else
+        print(c)
+ 
+
+if a > b and a > c: #si no se cumplen las dos condciones o no son verdaderas las dos, se ejecuta else
+    print(a)
+else:
+    print(c)
+
+
+if a > b or a > c: #aunque se cumpla una de las dos condiciones o aunque una sea verdadera se imprime a 
+    print(a)
+else:
+    print(c)
+
+
+if a > b:
+    if a > c:
+        print(a)
+
+    if b > c:
+        print(c)
+    else: 
+        print(b)
+
+
+cadena = "hola mundo python"
+for c in cadena: # c solo es una variable que toma el valor de cadena
+    print(c) #imprime cada uno de los caracteres de la variable cadena
+
+def contador_vocales(texto):
+    contador = 0
+    for letra in texto():
+        if letra in "aeiou".lower():
+            contador += 1
+        return contador
+
+
+a=10
+b=9
+c=8
+
+if a > b:
+    print(a)
+elif a > c:
+    print(a)
+if b < c:
+    print(a)
+
+a=27
+b=93
+
+if a >= b:
+    print(a)
+else:
+    print(b)
+
+a=27
+b=93
+
+if a <= b:
+    print(a)
+else:
+    print(b)
